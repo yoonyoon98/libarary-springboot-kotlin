@@ -23,12 +23,12 @@ class Book(
 
     private fun validateName(name: String) {
       require(name.isNotBlank()) { "책 이름은 필수입니다." }
-      require(name.length in 2..10) { "책 이름은 2~10자리여야 합니다." }
+      require(name.length in 2..100) { "책 이름은 2~100자리여야 합니다." }
     }
 
 
     fun fixture(
-      name: String = "책 이름",
+      name: String = "책 이름 없음",
       type: BookType = BookType.COMPUTER,
       id: Long? = null,
     ): Book {
